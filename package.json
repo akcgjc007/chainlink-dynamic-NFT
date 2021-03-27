@@ -4,8 +4,8 @@
   "description": "A Chainlink example in a Truffle box",
   "scripts": {
     "compile": "truffle compile",
-    "migrate": "truffle migrate --reset --network rinkeby -f 3",
-    "verify": "truffle run verify NFTSimple --network rinkeby --license MIT",
+    "migrate": "truffle migrate --reset --network rinkeby",
+    "verify": "truffle run verify DnDc --network rinkeby --license MIT",
     "clean": "rm -rf build node_modules"
   },
   "license": "MIT",

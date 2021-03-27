@@ -62,6 +62,7 @@ You can also run:
 ```bash
 truffle migrate --network kovan --reset
 ```
+
 If you want to use truffle commands.
 
 ### Local Blockchain
@@ -82,7 +83,7 @@ There are 3 helper scripts provided with this box in the scripts directory:
 - `request-data.js`
 - `read-contract.js`
 
-In addition, for working with Chainlink Price Feeds and ChainlinkVRF there are folders respectively. 
+In addition, for working with Chainlink Price Feeds and ChainlinkVRF there are folders respectively.
 
 They can be used by calling them from `npx truffle exec`, for example:
 
@@ -140,3 +141,8 @@ Node v10.16.3
 - Add tests for Chainlink Price Feeds
 - Refactor tests to use this instead of defining contracts with let
 - Use the Chainlink-published mocks for [MockV3Aggregator](https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/tests/MockV3Aggregator.sol) and [VRFCoordinatorMock](https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/tests/VRFCoordinatorMock.sol)
+
+## Deployment errors:
+
+- [Contract on Rinkeby](https://rinkeby.etherscan.io/address/0xf3B2fD91c6653a724Cf83bee61497C8334917908)
+- [Failed requestNewRandomCharacter()](https://rinkeby.etherscan.io/tx/0x12827afd2f7980d68f33935e274e5e49248866bdd40472f5b80512489194f011)

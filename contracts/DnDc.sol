@@ -4,10 +4,6 @@ pragma solidity ^0.6.6;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 
-// const KOVAN_VRF_COORDINATOR = '0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B'
-// const KOVAN_LINK_TOKEN = '0x01be23585060835e02b77ef475b0cc51aa1e0709'
-// const KOVAN_KEYHASH = '0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311'
-
 contract DnDc is ERC721, VRFConsumerBase {
     bytes32 public keyHash;
     address public vrfCoordinator;
