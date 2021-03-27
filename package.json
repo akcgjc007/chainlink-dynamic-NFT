@@ -6,7 +6,8 @@
     "compile": "truffle compile",
     "migrate": "truffle migrate --reset --network rinkeby",
     "verify": "truffle run verify DnDc --network rinkeby --license MIT",
-    "clean": "rm -rf build node_modules"
+    "clean": "rm -rf build node_modules",
+    "fund": "truffle exec scripts/fund-contract.js --network rinkeby"
   },
   "license": "MIT",
   "dependencies": {
