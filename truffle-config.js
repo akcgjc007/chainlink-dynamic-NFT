@@ -40,4 +40,7 @@ module.exports = {
     etherscan: process.env.ETHERSCAN_API_KEY,
   },
   plugins: ["truffle-plugin-verify"],
+  mocha: {
+    useColors: true
+  }
 };

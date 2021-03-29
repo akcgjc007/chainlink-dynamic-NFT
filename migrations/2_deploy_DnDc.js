@@ -5,13 +5,16 @@ const RINKEBY_LINK_TOKEN = "0x01be23585060835e02b77ef475b0cc51aa1e0709";
 const RINKEBY_KEYHASH =
   "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311";
 
+const fee = (10 ** 17).toString();
+
 module.exports = async (deployer, network, [defaultAccount]) => {
   await deployer.deploy(
     DnDc,
     RINKEBY_VRF_COORDINATOR,
     RINKEBY_LINK_TOKEN,
-    RINKEBY_KEYHASH
+    RINKEBY_KEYHASH,
+    fee
   );
 
-  let dndc = await DnDc.deployed();
+  // let dndc = await DnDc.deployed();  
 };

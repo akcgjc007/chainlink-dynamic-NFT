@@ -6,22 +6,18 @@
     "compile": "truffle compile",
     "migrate": "truffle migrate --reset --network rinkeby",
     "verify": "truffle run verify DnDc --network rinkeby --license MIT",
-    "clean": "rm -rf build node_modules",
-    "fund": "truffle exec scripts/fund-contract.js --network rinkeby"
+    "fund": "truffle exec scripts/fund-contract.js --network rinkeby",
+    "new": "truffle exec scripts/newChar.js --network rinkeby",
+    "clean": "rm -rf build node_modules"
   },
   "license": "MIT",
   "dependencies": {
     "@chainlink/contracts": "^0.1.6",
     "@openzeppelin/contracts": "^3.4.1",
-    "@truffle/hdwallet-provider": "^1.0.40",
-    "truffle-plugin-verify": "^0.5.7"
-  },
-  "devDependencies": {
-    "@chainlink/belt": "^0.0.3",
-    "@chainlink/test-helpers": "0.0.5",
-    "@openzeppelin/test-helpers": "^0.5.10",
-    "chai": "^4.3.0",
+    "truffle-plugin-verify": "^0.5.7",
     "dotenv": "^8.2.0",
     "truffle": "^5.1.65"
+  },
+  "devDependencies": {
   }
 }
