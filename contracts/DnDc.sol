@@ -6,6 +6,7 @@ import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 import "./RandomNumberConsumer.sol";
 
 contract DnDc is ERC721, RandomNumberConsumer {
+    string public tokenURI;
     struct Character {
         uint256 strength;
         uint256 speed;
@@ -23,12 +24,15 @@ contract DnDc is ERC721, RandomNumberConsumer {
         address _VRFCoordinator,
         address _LinkToken,
         bytes32 _keyHash,
-        uint256 _fee
+        uint256 _fee,
+        string memory _tokenURI
     )
         public
         RandomNumberConsumer(_LinkToken, _keyHash, _VRFCoordinator, _fee)
         ERC721("Dungeons and dragons character", "DnDc")
-    {}
+    {
+        tokenURI = _tokenURI;
+    }
 
     function requestNewRandomCharacter(
         uint256 userProvidedSeed,
@@ -60,13 +64,6 @@ contract DnDc is ERC721, RandomNumberConsumer {
         );
 
         _safeMint(requestToSender[requestId], newId);
-    }
-
-    function setTokenURI(uint256 tokenId, string memory _tokenURI) public {
-        require(
-            _isApprovedOrOwner(_msgSender(), tokenId),
-            "ERC721: transfer caller is not owner or approved."
-        );
-        _setTokenURI(tokenId, _tokenURI);
+        _setTokenURI(newId, tokenURI);
     }
 }
