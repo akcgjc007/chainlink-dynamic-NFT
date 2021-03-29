@@ -142,7 +142,6 @@ Node v10.16.3
 - Refactor tests to use this instead of defining contracts with let
 - Use the Chainlink-published mocks for [MockV3Aggregator](https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/tests/MockV3Aggregator.sol) and [VRFCoordinatorMock](https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/tests/VRFCoordinatorMock.sol)
 
-## Deployment errors:
-
-- [Contract on Rinkeby](https://rinkeby.etherscan.io/address/0xf3B2fD91c6653a724Cf83bee61497C8334917908)
-- [Failed requestNewRandomCharacter()](https://rinkeby.etherscan.io/tx/0x12827afd2f7980d68f33935e274e5e49248866bdd40472f5b80512489194f011)
+## Deployments:
+ - [The contract](https://rinkeby.etherscan.io/address/0x5283578E5c04A5eca147BfaA18BB3A341601d0CD#readContract)
+ - [Token on Opensea](https://testnets.opensea.io/assets/0x5283578e5c04a5eca147bfaa18bb3a341601d0cd/0)
